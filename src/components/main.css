@@ -1,0 +1,69 @@
+.header-text{
+    font-family: 'Dennis Sans', sans-serif;
+    font-weight: 450;
+    font-size: larger;
+   
+    margin-bottom: 1em;
+
+}
+
+i{
+    font-family:'Times New Roman', Times, serif;
+    color: #3c443f;
+}
+
+.sub-text{
+    width: 350px;
+    margin: 0 auto;
+}
+
+.sub-text-long{
+    width: 500px;
+    margin: 0 auto;
+    
+}
+
+.card-section{
+    display: flex;
+   overflow: hidden;
+    gap: 10px;
+    padding: 1em;
+}
+
+.img-div, .img-div-two{
+    position: absolute;
+    max-height: 350px;
+    max-width: 300px;
+    overflow: hidden;
+    background-color: #3c443f;
+}
+
+.img-div img, .img-div-two img{
+    object-fit: contain;
+    overflow: hidden;
+
+}
+
+.img-div{
+    left: 0;
+    top: 10px;
+}
+
+.img-div-two{
+    right: 0;
+    bottom: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+    .img-div, .img-div-two{
+        display: block;
+        position: static;
+        margin: 1em; 
+    }
+
+    .img-div, .img-div-two{
+        max-width: none;
+        max-width: none;
+    }
+  
+  }

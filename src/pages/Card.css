@@ -1,0 +1,7 @@
+.card{
+    min-height: 200px;
+    min-width: 400px;
+    
+    object-fit: cover;
+    background-color: blanchedalmond;
+}
