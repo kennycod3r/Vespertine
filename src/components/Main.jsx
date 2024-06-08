@@ -9,7 +9,7 @@ export default function Main() {
       <div>
         <div className="img-div"><img src="https://images.unsplash.com/photo-1561065270-5c2af775b542?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGlubmVyJTIwcGFydHl8ZW58MHx8MHx8fDA%3D" alt="img1"/></div>
         <div className="header-text">
-          <h2>Guranteeing Better Experiencees</h2>
+          <h2>Better Experiencees</h2>
           <h2>
             since<i>“17”.</i>
           </h2>

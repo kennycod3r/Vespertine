@@ -1,0 +1,12 @@
+.tinysection{
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 2em;
+}
+
+.tinysection p{
+    text-align: left;
+    padding: 2em;
+}

@@ -2,11 +2,12 @@ import React from "react";
 import Logo from "../assets/hotelLogo.svg";
 import './Card.css';
 import CardSection from "../components/CardSection";
+import Reservation from "../components/reservation/Reservation";
 
 const Dinning = () => {
   return (
     <>
-    <section className="main main-hero">
+    <section className="main main-hero ">
       <div
         className="relative hero"
         style={{
@@ -31,6 +32,7 @@ const Dinning = () => {
         </p>
       </div>
     </section>
+    <Reservation/>
     <CardSection/>
     </>
   );

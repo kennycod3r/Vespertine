@@ -2,16 +2,16 @@
     font-family: 'Dennis Sans', sans-serif;
     font-weight: 450;
     font-size: larger;
-   
     margin-bottom: 1em;
-
 }
 
 i{
     font-family:'Times New Roman', Times, serif;
     color: #3c443f;
 }
-
+.tc{
+    text-align: center;
+}
 .sub-text{
     width: 350px;
     margin: 0 auto;
@@ -29,7 +29,14 @@ i{
     gap: 10px;
     padding: 1em;
 }
-
+.main-tg-section{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    text-align: left;
+}
+.main-tg-section p{
+text-align: left;
+}
 .img-div, .img-div-two{
     position: absolute;
     max-height: 350px;
@@ -65,5 +72,11 @@ i{
         max-width: none;
         max-width: none;
     }
-  
+    .main-tg-section{
+        display: block;
+        overflow: hidden;
+    }
+    .header-text{
+        text-align: center;
+    }
   }

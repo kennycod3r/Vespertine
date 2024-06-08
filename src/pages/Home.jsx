@@ -1,20 +1,25 @@
 // src/pages/Home.jsx
-import React from 'react';
-import Main from '../components/Main';
-import Hero from '../components/Hero';
-import HeroTwo from '../components/HeroTwo';
-import SmallSection from '../components/SmallSection';
-import Slideshow from '../components/Slideshow/Slideshow';
-
+import React from "react";
+import StaffSection from "../components/staff/StaffSection";
+import Main from "../components/Main";
+import Hero from "../components/hero/Hero";
+import HeroTwo from "../components/HeroTwo";
+import SmallSection from "../components/smallsection/SmallSection";
+import Slideshow from "../components/Slideshow/Slideshow";
+import TinySection from "../components/Tinysection/TinySection";
+import BlackSection from "../components/blacksection/BlackSection";
 const Home = () => {
   return (
     <div>
-      <Hero/>
-      <Main/>
-      <Slideshow/>
-     
-      <h1>Welcome to Our Hotel</h1>
-      <p>Enjoy your stay!</p>
+      <Hero />
+      <main>
+        <Main />
+        <TinySection />
+        <StaffSection/>
+        <Slideshow />
+        <SmallSection />
+      </main>{" "}
+      <BlackSection />
     </div>
   );
 };

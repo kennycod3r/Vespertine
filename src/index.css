@@ -8,7 +8,7 @@
   --color-dark: rgba(var(--color-dark-rgb), 1);
   --animation-nav: 0.4s cubic-bezier(0.3, 0, 0.3, 1);
   --border-radius: 2em;
-  --box-shadow: 0 0 10px #52525235;
+  --box-shadow: 0 0 10px #0909098d;
   --font-size-small: clamp(16px, 1.2vw, 19px);
   --color-dark: #1C1D20;
     --color-blue: #455CE9;
@@ -18,10 +18,16 @@
     --primaryGreen: rgba(0, 21, 20, 1);;
     --color-white: #f2f2ec;
     --color-border: rgba(28, 29, 32, 0.175);
-    --color-border-solid: #D2D2D2;
-  
-}
+    --border:1px solid #D2D2D2;
 
+    --secondaryGreen: #232E22;  
+    --secondaryPink: #E7BEAF;  
+    --shadow-light: 0 40px 24px rgba(0,0,0,.02), 0 18px 18px rgba(0,0,0,.03), 0 4px 10px rgba(0,0,0,.03);
+}
+.heroTwo{
+  width: 90%;
+  padding: 10px;
+}
 .button-container{
   display: flex;
   align-items: center;
@@ -52,7 +58,9 @@ button {
   height: var(--btn-height);
   transition: background-color var(--animation-nav);
 }
-
+button:hover{
+  background-color: var(--secondaryPink);
+}
 a {
   font-weight: 500;
   text-decoration: inherit;
@@ -72,18 +80,20 @@ li {
 a:hover {
   color: #ff1919;
 }
+.tinysection{
+  display: flex;
+  gap: 10px;
+}
 
 body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   font-variation-settings: "wdth" 100, "YTLC" 500;
   font-size: 16px;
-  background-color: var(--color-light);
   line-height: 1.6;
   transition: var(--animationSmooth);
   background-color:var(--color-white);
-  
-  color: var(--primaryGreen);
+  color: var(--secondaryGreen);
   min-height: 100svh;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -103,24 +113,13 @@ h1 {
   
 }
 
-nav {
-  min-height: 5rem;
-  position: fixed;
-  padding: 0 20px;
-  width: 100%;
 
-  background-color: rgba(0, 0, 0, 0.051) !important;
-  top: 0;
-  z-index: 179;
-  border-bottom: 1px solid #f8f6f42d;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 img{
   width: 100%;
 }
+
+
 
 .inner-div {
   width: 100%;
@@ -128,7 +127,6 @@ img{
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   text-align: center;
-  color: white;
 }
 
 .div-one ul {
@@ -167,6 +165,25 @@ nav li{
 section{
   min-height: 70vh;
 }
+nav {
+  min-height: 5rem;
+  position: fixed;
+  padding: 0 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.051);
+  top: 0;
+  z-index: 179;
+  border-bottom: 1px solid #f8f6f42d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+}
+main{
+  border-bottom: var(--border);
+  border-top: var(--border);
+}
+
 
 @media (prefers-color-scheme: light) {
 }
