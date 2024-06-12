@@ -5,3 +5,7 @@
     object-fit: cover;
     background-color: blanchedalmond;
 }
+
+.relative-con{
+    position: relative;
+}

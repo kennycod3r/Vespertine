@@ -1,77 +1,107 @@
 .main {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .sub-text {
-    margin-bottom: 20px;
-  }
-  
-  .flex-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .inner-flex-con {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  .chef-name p{
-    font-size: 13px;
-    font-weight: bold;
-    min-width:100px;
-    background-color: whitesmoke;
-    border: 1px solid rgba(151, 151, 151, 0.295);
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    margin-bottom: 25px;
-    transition: all 200ms ease-in-out;
-  }
+  text-align: center;
+  padding: 20px;
+}
 
-  .chef-name{
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: all 200ms ease-in-out;
-    opacity: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
+.staff-section {
+  background-color: var(--secondaryGreen);
+  color: #fff;
+  padding: 4em 0;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  min-height: 90vh;
+  overflow: hidden;
+}
 
-  .chef-name:hover{
-    opacity: 1;
-    transition: all 200ms ease-in-out;
-  }
-  .small-card {
-    position: relative;
-    transition:all 0.3s ease;
-  }
-  
+.sub-text {
+  margin-bottom: 20px;
+}
+
+.flex-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.inner-flex-con {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.chef-name p {
+  font-size: 13px;
+  font-weight: bold;
+  min-width: 100px;
+  background-color: whitesmoke;
+  border: 1px solid rgba(151, 151, 151, 0.295);
+  border-radius: 10px;
+  box-shadow: var(--shadow-light);
+  color: var(--secondaryGreen);
+  margin-bottom: 25px;
+  transition: all 200ms ease-in-out;
+}
+
+.chef-name {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.chef-name:hover {
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.small-card {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cover-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.small-card:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.small-card:not(:hover) {
+  margin-top: 10px;
+}
+
+.inner-flex-con .small-card:first-child {
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 650px) {
   .cover-img {
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
+    border: 1px solid #4c4c4c;
     object-fit: cover;
-    border-radius: 50%;
   }
-  
-  .small-card:hover {
-    transform: scale(1.2);
-    z-index: 1;
-  
-    
+  .flex-con{
+    flex-wrap: wrap;
   }
-  
-  .small-card:not(:hover) {
-   margin-top: 10px;
+  .small-card{
+    flex-grow: 1;
   }
-  
-  .inner-flex-con .small-card:first-child {
-    margin-left: 0;
+  .inner-flex-con{
+    flex-wrap: wrap;
   }
-  
+}

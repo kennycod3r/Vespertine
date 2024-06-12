@@ -2,5 +2,56 @@
     background-color: #181818;
     color: white;
     display: flex;
+    width: 100%;
     align-items: center;
+    padding: 0;
+    position: relative;
+    min-height: fit-content;
+    border-bottom: none;
+    overflow: hidden;
 }
+
+.white-cutaway{
+    position: absolute;
+    min-height: 400px;
+    width: 400px;
+    background-color: #fff;
+    min-width: 200px;
+    text-align: center;
+    bottom: 10px;
+    z-index: 2;
+    padding: .5em;
+   
+    color: #181818;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.white-cutaway p{
+    margin-bottom: 10px;
+}
+
+.footer-header{
+    position: absolute;
+    margin-top: 5em;
+}
+.white-cutaway-inner{
+    min-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../img/blackWhite.webp');
+    background-color: #181818;
+}
+
+@media only screen and (max-width: 650px) {
+    /* .blacksection{
+      min-height: calc((5rem) * 8);
+      padding: (1.25em, 4vw, 2.5em);
+      width: calc(var(1em) * 1.75);
+      
+    } */
+    
+  }

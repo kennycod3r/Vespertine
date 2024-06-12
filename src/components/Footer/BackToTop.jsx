@@ -4,7 +4,7 @@ const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 700) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -28,9 +28,9 @@ const BackToTop = () => {
   return (
     <div className="back-to-top">
       {isVisible && (
-        <div onClick={scrollToTop} className="back-to-top-button">
-          ↑
-        </div>
+        <button onClick={scrollToTop} className="back-to-top-button  btn-reg">
+          <span>back to top</span> <span>↑</span>
+        </button>
       )}
     </div>
   );

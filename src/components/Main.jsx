@@ -11,12 +11,12 @@ export default function Main() {
         <div className="header-text">
           <h2>Better Experiencees</h2>
           <h2>
-            since<i>“17”.</i>
+            since<i className="num">“17”.</i>
           </h2>
         </div>
         <p className="sub-text">Just a few hours from the airport, on a green hill overlooking the sea. A small resort with a big view and a great restaurant. Here you find the true Bali.</p>
-      <div className="button-container"> <button>Book a Villa</button></div>
-      <div className="img-div-two"><img src="https://images.unsplash.com/photo-1695512937087-859dc39418bb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2hlZiUyMGZpcmV8ZW58MHx8MHx8fDA%3D" alt="img1"/></div>
+      <div className="button-container"> <button className="btn-reg">Book a Villa</button></div>
+      <div className="img-div-two"><img src="https://www.chateauwittem.com/wp-content/uploads/2022/05/ChateauWittem_04-22_Food_72dpi_009.webp" alt="img1"/></div>
       </div>
     </section>
   );

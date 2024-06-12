@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import View from './onview/View';
 
 const Booking = () => {
   return (
+    <>
+      <View/>
     <section className='booking'>
         <div>
             <div className='booking-nav'>
@@ -14,6 +17,7 @@ const Booking = () => {
             </div>
         </div>
     </section>
+    </>
   )
 }
 

@@ -4,9 +4,10 @@ import chef from "../../img/chef.webp";
 
 const StaffSection = () => {
   const arr = [1, 2, 3, 4, 5];
+ 
   return (
-    <section className="main">
-      <h1>Our Major Chefs</h1>
+    <section className="staff-section">
+      <h1>Meet <i>“our”</i> Chefs</h1>
       <p className="sub-text">
         Our cuisine has won international awards and has been featured in two
         cookbooks.

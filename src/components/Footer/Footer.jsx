@@ -37,37 +37,39 @@ export default function Footer() {
   };
 
   return (
-    <section className="Homefooter">
+    <footer className="Homefooter">
       <BackToTop />
       <div className="f-title">
-        <h1>FAQ</h1>
+        <h2>INFORMATION</h2>
       </div>
       <div className="footer-container">
         <div className="footer-col">
-          <div className="aligned-paragraphs footer-ap">
-            <p>
-              Extra 10% off* discount sent via email to new subscribers only. By
-              subscribing, you agree to receive marketing communications
-            </p>
-            <p>by email. You can unsubscribe at any point.</p>
+          <div>
+            <p>ROOMS & SUITES. RESTURANT & BAR</p>
           </div>
           <ul className="aligned-paragraphs footer-ap">
-            <li>Can I get a refund on my order?</li>
-            <li>Can I make changes to my order?</li>
-            <li>Can I cancel my order?</li>
-            <li>Do you offer any Discounts?</li>
+            <li className="small-text">Bussiness</li>
+            <li className="small-text">Location</li>
+            <li className="small-text">History</li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <p>CONTACT</p>
+
+          <ul className="aligned-paragraphs footer-ap">
+            <li className="small-text">0031 0 434 50 12 08</li>
+            <li className="small-text">Wittemer Allee 3, 6286 AA Wittem</li>
+            <li className="small-text">welcome@chateauwittem.com</li>
           </ul>
         </div>
         <div className="footer--text footer-col">
           <div>
             <h2 className="headtext-small fhs">
-              Subscribe and Receive
-              <br />
-              News And Offers!
+              Subscribe and Receive News And Offers!
             </h2>
           </div>
           <div className="newsletter-div">
-            <p
+            <p className="small-text"
               style={{
                 color:
                   userEmail.subscribeMsg === "Enter a valid email"
@@ -84,10 +86,17 @@ export default function Footer() {
               onChange={handleSubscribe}
               value={userEmail.eventValue}
             />
-            <button onClick={handleSubscribeText}>Subscribe</button>
+            <div className="sub-btn" onClick={handleSubscribeText}><p className="boldp">Subscribe</p></div>
           </div>
         </div>
       </div>
-    </section>
+      <ul className="footer-strip">
+        <li>© copyright' 2024</li>
+        <li>developer-social/x/instagram</li>
+        <li>codebykennycod3r</li>
+        <li>Privacy Policy</li>
+        <li>Terms and Condition</li>
+      </ul>
+    </footer>
   );
 }

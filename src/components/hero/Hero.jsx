@@ -12,22 +12,24 @@ const Hero = () => {
         }}
       >
         <div className="static-nav">
-          <div>
-            <p className="logo-text">VESPERTINE</p>
-          </div>
-
-          <div className="static-nav-inner">
-            <p className="small-text">HOTCALL</p>
-            <p className="small-text">RESERVE</p>
-          </div>
+            <p className="logo-text">VESPERTINE</p>          
+            <button  className="btn-reg">BOOK YOUR STAY </button>
         </div>
-        <div className="hero-overlay"></div>
+        <div className="hero-overlay h-overlay-bc"></div>
         <div className="hero-text-main">
           <div>
             <img className="svg small-text" src={Plant} alt="Plant" />
           </div>
           <p className="small-text">HOTEL RESORT — LOVINA, BALI</p>
-         <div className="explore-div"> <div className="explore-btn">EXPLORE</div></div>
+        </div>
+      </div>
+      <div className="view-hero-header ">
+        <div  style={{backgroundColor:"transparent", color:"white"}}><p className="small-text"> ↓ EXPLORE </p></div>
+        <div className="view-hero-header-details">
+          <p>HOTCALL</p>
+          <p>HOTCALL</p>
+          <p>HOTCALL</p>
+        
         </div>
       </div>
     </section>

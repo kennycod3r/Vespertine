@@ -21,7 +21,7 @@ const CardSection = () => {
           {/* {//https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZvb2R8ZW58MHx8MHx8fDA%3D} */}
           <div className="button-container">
             {" "}
-            <button>Make A reservation</button>
+            <button className="btn-reg">Make A reservation</button>
           </div>
           <div className="card-section">
             <div className="card">

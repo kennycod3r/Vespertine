@@ -7,10 +7,11 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.scrollY > 260) {
+    if (window.scrollY > 160) {
       setIsVisible(true);
-    } else {
-      setIsVisible(false);
+    }
+    else{
+      setIsVisible(false)
     }
   };
 
@@ -25,7 +26,7 @@ const Navbar = () => {
     opacity: isVisible ? 1 : 0,
     overflow: "hidden",
     borderBottom: isVisible ? "1px solid #D2D2D2": "inherit",
-    backgroundColor: isVisible ? "#f2f2ec" : "inherit",
+    backgroundColor: isVisible ? "#fff" : "inherit",
     backdropFilter:isVisible ? "blur(0.5em)" : "inherit",
     color: isVisible ? "black" : "inherit",
     transition: "all 0.4s cubic-bezier(0.3, 0, 0.3, 1)",
@@ -41,22 +42,25 @@ const Navbar = () => {
           <div className="div-one" id="sidebar">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/"><p className="boldp">HOME</p></Link>
               </li>
               <li>
-                <Link to="/Dinning">Dinning</Link>
+                <Link to="/Dinning"> <p className="boldp">DINNING</p></Link>
               </li>
               <li>
-                <Link to="/rooms">Rooms</Link>
+                <Link to="/rooms"><p className="boldp">ROOMS</p></Link>
               </li>
               <li>
-                <Link to="/booking">Booking</Link>
+                <Link to="/booking"><p className="boldp">BOOKING</p></Link>
               </li>
             </ul>
           </div>
+          
           <div className="div-one div-two headtext-small">VESPERTINE</div>
-          <div className="div-one div-three">
-            <button>Book your stay</button>
+          <div className="div-one nav-3">
+            <button  className="btn-reg">Book
+            <div class="button-bg is--light"></div>
+            </button>
           </div>
         </div>
       </nav>

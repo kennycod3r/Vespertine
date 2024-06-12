@@ -3,44 +3,38 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  
   min-width: 100%;
- 
   position: relative;
-  border-bottom: 1px solid rgba(196, 196, 196, 0.825)
+  border-bottom: 1px solid rgba(196, 196, 196, 0.825);
 }
 
-
-
-h3{
+h3 {
   font-weight: 300;
 }
-section{
+section {
   min-height: 70vh;
 }
-img{
+img {
   width: 100%;
   object-fit: contain;
 }
 
-.small-text{
+.small-text {
   font-size: 14px;
   margin-bottom: 15px;
   text-transform: capitalize;
 }
 
-.main-text-area{
+.main-text-area {
   padding-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 .icon-grid {
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: absolute;
   min-width: 90%;
   background-color: rgba(0, 0, 0, 0.781);
@@ -62,10 +56,6 @@ img{
   max-width: 90%;
   padding: 1em;
 }
-
-/* hero */
-
-
 .span-instruct {
   position: absolute;
   bottom: 10px;
@@ -78,4 +68,168 @@ img{
   top: 50%;
   left: 0;
   color: aliceblue;
+}
+
+.rooms-page {
+  margin-top: 40px;
+  overflow: hidden;
+}
+.rooms-page {
+  display: grid;
+  position: relative;
+  grid-template-columns: 4fr 10fr;
+}
+.rooms-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.roomcard-img {
+  object-fit: cover;
+  min-height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+.room-card {
+  display: flex;
+  width: calc(100% + 2px);
+  min-height: 100%;
+  overflow: hidden;
+  height: 100%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  flex-direction: column;
+}
+
+.r-overlay {
+  color: white;
+  background: rgba(0, 0, 0, 0.247);
+  transition: all 200ms ease-out;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.r-overlay:hover {
+  opacity: 1;
+}
+
+.product-detail {
+  display: grid;
+  padding: 4em 1em;
+  gap: 1em;
+  overflow: hidden;
+  align-items:flex-start;
+  align-content: center;
+  justify-content: center;
+  z-index: 12;
+  overflow: hidden;
+  grid-template-columns: 3fr 1fr;
+}
+
+.p-d-img-div {
+  
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    min-height: fit-content;
+    overflow: hidden;
+  
+}
+
+.p-d-img-div img {
+ 
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+  flex-grow: 1;
+}
+
+.p-d-img-div-inner{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100%;
+}
+
+.rooms-content {
+  position: relative;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-header {
+  font-size: 0.5em;
+  border-bottom: 0.1px solid silver;
+}
+@media only screen and (max-width: 650px) {
+  .rooms-page {
+    display: block;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .room-header h3 {
+    font-size: large;
+    font-weight: 800;
+    color: var(--secondaryGreen);
+  }
+
+  .room-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(217, 217, 217);
+  }
+
+  .rooms-container {
+    margin-top: 40px;
+  }
+
+  .product-detail {
+    display: block;
+    padding: 1em 0;
+  }
+
+  .p-d-img-div {
+    min-height: auto;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .p-d-img-div img {
+    overflow: hidden;
+  }
+}
+.product-detail-list {
+  padding: 1em;
+  text-align: left;
+  border-bottom: 0.1px solid silver;
+}
+
+.flexsvg-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.plantsvg {
+  height: 40px;
 }

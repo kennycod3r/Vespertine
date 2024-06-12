@@ -6,12 +6,12 @@ const SmallSection = () => {
     <div className="small-section">
       <div className="ss-grid">
         <div>
-          <h1>VESPERTINE</h1>
+          <h2>VESPERTINE</h2>
           <p>
             {" "}
-            <i>/ ves·​per·​tine /</i>
+            <i className="num">/ ves·​per·​tine /</i>
           </p>
-          <p className="sub-text p2">
+          <p className="small-text">
             : of, relating to, or occurring in the <i>evening.</i>
           </p>
         </div>
@@ -19,12 +19,12 @@ const SmallSection = () => {
           <ul>
             <li>
               <div>
-              <p>RATINGS/REVIEWS</p>
-              <div>Google ★★★★★</div>
+              <p className="boldp ">RATINGS/REVIEWS</p>
+              <div className="boldp">Google ★★★★★</div>
               <p className="small-text">5.0/ 1232</p>
 
               </div>
-              <p>
+              <p  className="small-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Voluptates ex eos facere molestiae molestias alias at ut amet
                 quibusdam ipsam illum, est, eum esse corporis dignissimos, aut
@@ -33,10 +33,10 @@ const SmallSection = () => {
             </li>
             <li>
              <div>
-             <p>MICHELLIN STARS</p>
-              <div>★★★</div>
+             <p className="boldp">MICHELLIN STARS</p>
+              <div className="boldp ">★★★</div>
              </div>
-              <p>
+              <p  className="small-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Voluptates ex eos facere molestiae molestias alias at ut amet
                 quibusdam ipsam illum, est, eum esse corporis dignissimos, aut

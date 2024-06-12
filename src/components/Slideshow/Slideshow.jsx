@@ -25,7 +25,7 @@ const Slideshow = () => {
 
   return (
     <div className="slideshow-container">
-      <button className="prev" onClick={prevSlide}>❮</button>
+      <div className="prev" onClick={prevSlide}>❮</div>
       <div className="slide relative">
       <div className='room-no'><p>{rooms[currentIndex].name}</p> <div>—————</div> <p>4</p></div>
         <div className='dark-wrapper'></div>
@@ -33,15 +33,13 @@ const Slideshow = () => {
         <div className="caption">
             <ul>
               <li><div><img className="svg" src={plateLogo} alt="logo" style={{objectFit:"contain", border:"none"}}/></div></li>
-              <li><p className='sub-text tc'>CUISINES.</p></li>
-              <li><p>Just a few hours from the airport, on a green hill overlooking the sea. A small resort with a big view and a great restaurant. Here you find the true Bali.</p></li>
-              <li><p>READ MORE IN DINNING</p></li>
+              <button>READ MORE IN DINNING</button>
             </ul>
             
             
         </div>
       </div>
-      <button className="next" onClick={nextSlide}>❯</button>
+      <div className="next" onClick={nextSlide}>❯</div>
     </div>
   );
 };
