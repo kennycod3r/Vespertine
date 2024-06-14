@@ -1,61 +1,45 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Footer.css";
-import React from "react";
-import BackToTop from "./BackToTop";
+const BackToTop = React.lazy(() => import("./BackToTop"));
 
 export default function Footer() {
-  const [userEmail, setUserEmail] = useState({
-    eventValue: "",
-    subscribeMsg: "Subscribe to our newsletter",
-  });
+  const [email, setEmail] = useState("");
+  const [subscribeMessage, setSubscribeMessage] = useState("Subscribe to our newsletter");
 
-  const handleSubscribe = (event) => {
-    setUserEmail((prevState) => ({
-      ...prevState,
-      eventValue: event.target.value,
-    }));
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
-  const handleSubscribeText = () => {
-    if (userEmail.subscribeMsg === "Subscribed!") {
-      return;
-    } else if (userEmail.eventValue.length < 10) {
-      setUserEmail((prevState) => ({
-        ...prevState,
-        subscribeMsg: "Enter a valid email",
-      }));
+  const handleSubscription = () => {
+    if (subscribeMessage === "Subscribed!") return;
+
+    if (email.length < 10) {
+      setSubscribeMessage("Enter a valid email");
     } else {
-      setUserEmail((prevState) => ({
-        ...prevState,
-        subscribeMsg: "Subscribed!",
-      }));
+      setSubscribeMessage("Subscribed!");
+      setEmail("");
     }
-    setUserEmail((prevState) => ({
-      ...prevState,
-      eventValue: "",
-    }));
   };
 
   return (
     <footer className="Homefooter">
-      <BackToTop />
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <BackToTop />
+      </React.Suspense>
       <div className="f-title">
         <h2>INFORMATION</h2>
       </div>
       <div className="footer-container">
         <div className="footer-col">
-          <div>
-            <p>ROOMS & SUITES. RESTURANT & BAR</p>
-          </div>
+          <p>ROOMS & SUITES. RESTURANT & BAR</p>
           <ul className="aligned-paragraphs footer-ap">
-            <li className="small-text">Bussiness</li>
+            <li className="small-text">Business</li>
             <li className="small-text">Location</li>
             <li className="small-text">History</li>
           </ul>
         </div>
         <div className="footer-col">
           <p>CONTACT</p>
-
           <ul className="aligned-paragraphs footer-ap">
             <li className="small-text">0031 0 434 50 12 08</li>
             <li className="small-text">Wittemer Allee 3, 6286 AA Wittem</li>
@@ -63,30 +47,28 @@ export default function Footer() {
           </ul>
         </div>
         <div className="footer--text footer-col">
-          <div>
-            <h2 className="headtext-small fhs">
-              Subscribe and Receive News And Offers!
-            </h2>
-          </div>
+          <h2 className="headtext-small fhs">
+            Subscribe and Receive News And Offers!
+          </h2>
           <div className="newsletter-div">
-            <p className="small-text"
+            <p
+              className="small-text"
               style={{
-                color:
-                  userEmail.subscribeMsg === "Enter a valid email"
-                    ? "red"
-                    : "#f1f1f1",
+                color: subscribeMessage === "Enter a valid email" ? "red" : "#f1f1f1",
               }}
             >
-              {userEmail.subscribeMsg}
+              {subscribeMessage}
             </p>
             <input
               placeholder="Enter Your Email Address"
               type="email"
               required
-              onChange={handleSubscribe}
-              value={userEmail.eventValue}
+              onChange={handleEmailChange}
+              value={email}
             />
-            <div className="sub-btn" onClick={handleSubscribeText}><p className="boldp">Subscribe</p></div>
+            <div className="sub-btn" onClick={handleSubscription}>
+              <p className="boldp">Subscribe</p>
+            </div>
           </div>
         </div>
       </div>

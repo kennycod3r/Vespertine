@@ -12,10 +12,10 @@
 }
 
 .view-header {
-    padding-right: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .view-list-container {
@@ -29,8 +29,6 @@
   flex-direction: column;
   gap: 10px;
 }
-
-
 
 .view-card {
   position: relative;
@@ -55,7 +53,6 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  
   transition: opacity 0.3s;
 }
 
@@ -66,7 +63,6 @@
 .view-overlay-text {
   font-size: 12px;
   color: #fff;
-  
 }
 
 .view-image {
@@ -76,7 +72,7 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .view-section{
+  .view-section {
     display: none;
   }
 }

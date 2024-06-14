@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const BackToTop = () => {
+const BackToTop = ({ scrollYThreshold = 700 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.scrollY > 700) {
+    if (window.scrollY > scrollYThreshold) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -28,12 +29,16 @@ const BackToTop = () => {
   return (
     <div className="back-to-top">
       {isVisible && (
-        <button onClick={scrollToTop} className="back-to-top-button  btn-reg">
+        <button onClick={scrollToTop} className="btn-reg back-to-top-button">
           <span>back to top</span> <span>↑</span>
         </button>
       )}
     </div>
   );
+};
+
+BackToTop.propTypes = {
+  scrollYThreshold: PropTypes.number
 };
 
 export default BackToTop;

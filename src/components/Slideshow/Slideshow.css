@@ -1,4 +1,3 @@
-/* src/components/Slideshow.css */
 .slideshow-container {
   position: relative;
   max-width: 95%;
@@ -23,8 +22,6 @@
   top: 50%;
   width: 70px;
   height: 70px;
-  min-width: none;
-  min-height: none;
   background-color: #ffffff0c;
   color: white;
   font-weight: bold;
@@ -52,9 +49,8 @@
   width: 30%;
   height: 100%;
   color: #fff;
-  border-radius: none;
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.219);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   display: flex;
   align-items: flex-end;
@@ -64,37 +60,37 @@
   backdrop-filter: blur(0.5em);
 }
 
-.caption p{
+.caption p {
   text-transform: uppercase;
 }
 
-.caption li{
+.caption li {
   padding: 1em;
 }
 
-.room-no{
-position: absolute;
-top: 10px;
-color: white;
-z-index: 1;
-right: 45%;
-display: flex;
-gap: 10px;
+.room-no {
+  position: absolute;
+  top: 10px;
+  color: white;
+  z-index: 1;
+  right: 45%;
+  display: flex;
+  gap: 10px;
 }
+
 @media only screen and (max-width: 650px) {
-  .slideshow-container{
+  .slideshow-container {
     flex-direction: column;
     display: flex;
     padding: 0;
     text-align: center;
     max-width: none;
-    
   }
   .slide img {
     max-height: 300px;
     object-fit: cover;
   }
-  .caption{
+  .caption {
     display: none;
   }
 }

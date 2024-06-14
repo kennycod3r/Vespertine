@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <Hero />
       <main>
-        <View/>
+       
         <Main />
         <StaffSection/>
         <div className="overflow-divs">
@@ -23,6 +23,7 @@ const Home = () => {
         <SmallSection />
         </div>
       </main>{" "}
+      <View/>
       <BlackSection />
     </div>
   );

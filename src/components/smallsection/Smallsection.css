@@ -1,49 +1,68 @@
-.small-section{
-    padding: 2em 1em;
-    padding-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.small-section {
+  padding: 2em 1em;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .small-section h1{
-    text-align: left;
-  }
-  .ss-grid .p2{
-    text-align: left;
-    width: 100%;
-  }
-  .ss-grid{
-    display: grid;
-    width: 98%;
-    gap: 20px;
-    overflow: hidden;
-    grid-template-columns: 1fr 6fr;
-  }
+.small-section h2 {
+  text-align: left; /* Changed h1 to h2 for consistency */
+}
 
-  .ss-grid ul{
-   display: block;
-  }
+.ss-grid .p2 {
+  text-align: left;
+  width: 100%;
+}
 
-  .ss-grid li{
-    padding: 1em;
-    text-align: left;
-    min-width: 100%;
-    display: flex;
+.ss-grid {
+  display: grid;
+  width: 98%;
+  gap: 20px;
+  overflow: hidden;
+  grid-template-columns: 1fr 6fr;
+}
+
+.ss-grid ul {
+  list-style-type: none; /* Removed display:block and added list-style-type none for list items */
+  padding: 0;
+}
+
+.ss-grid li {
+  padding: 1em;
+  text-align: left;
+  min-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 0.1px solid silver;
+}
+
+.ss-grid li div {
+  min-width: 30%;
+}
+
+.boldp {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 650px) {
+  .small-section {
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    border-bottom: 0.1px solid silver;
   }
 
-  .ss-grid li div{
-    min-width: 30%;
+  .ss-grid {
+    grid-template-columns: 1fr; /* Adjusted grid layout to single column */
+    gap: 10px; /* Reduced gap for better spacing */
   }
 
-  @media only screen and (max-width: 650px) {
-    .small-section{
-      flex-direction: column;
-    }
-    .ss-grid{
-      display: block;
-    }
+  .ss-grid li {
+    padding: 1em 0; /* Adjusted padding for better spacing */
+    border-bottom: none; /* Removed border bottom for better mobile appearance */
   }
+
+  .boldp {
+    font-weight: bold;
+  }
+}

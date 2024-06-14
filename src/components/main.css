@@ -1,82 +1,95 @@
-.header-text{
-    font-family:sans-serif;
+.header-text {
+    font-family: sans-serif;
     font-weight: 450;
     font-size: larger;
     margin-bottom: 1em;
-}
-.num{
+  }
+  
+  .num {
     color: #3c443f;
-}
-i{
-    font-family:'Times New Roman', Times, serif;
+  }
+  
+  i {
+    font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
-}
-.tc{
+  }
+  
+  .tc {
     text-align: center;
-}
-.sub-text{
+  }
+  
+  .sub-text {
     width: 350px;
     margin: 0 auto;
-}
-
-.sub-text-long{
+  }
+  
+  .sub-text-long {
     width: 500px;
     margin: 0 auto;
-    
-}
-
-.card-section{
+  }
+  
+  .card-section {
     display: flex;
-   overflow: hidden;
+    overflow: hidden;
     gap: 10px;
     padding: 1em;
-}
-.main-tg-section{
+  }
+  
+  .main-tg-section {
     display: grid;
     grid-template-columns: 2fr 8fr;
     text-align: left;
-}
-.main-tg-section p{
-text-align: left;
-}
-.img-div, .img-div-two{
+  }
+  
+  .main-tg-section p {
+    text-align: left;
+  }
+  
+  .img-div,
+  .img-div-two {
     position: absolute;
     height: 350px;
     max-width: 300px;
     overflow: hidden;
     background-color: #3c443f;
-}
-
-.img-div img, .img-div-two img{
+  }
+  
+  .img-div img,
+  .img-div-two img {
     object-fit: cover;
     overflow: hidden;
     min-height: 100%;
-
-}
-
-.img-div{
+  }
+  
+  .img-div {
     left: 0;
     top: 10px;
-}
-
-.img-div-two{
+  }
+  
+  .img-div-two {
     right: 0;
     bottom: 10px;
-}
-
-@media only screen and (max-width: 650px) {
-
-    .img-div, .img-div-two{
-        visibility: hidden;
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .img-div,
+    .img-div-two {
+      display: none; /* Instead of visibility:hidden, use display:none to completely hide on smaller screens */
     }
-    .header-text{
-        font-size: small
+    
+    .header-text {
+      font-size: small; /* Changed to semi-colon to terminate CSS properties */
     }
-    .sub-text{
-        padding: 0 6px;
-        margin-top: 0;
+    
+    .sub-text {
+      width: 90%; /* Adjusted padding and margin for better responsiveness */
+      margin: 0 auto;
+      padding: 0 10px;
+      margin-top: 0;
     }
-    .main{
-        min-height: 60vh;
+    
+    .main {
+      min-height: 60vh;
     }
   }
+  

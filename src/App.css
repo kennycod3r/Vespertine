@@ -132,7 +132,6 @@ img {
 }
 
 .p-d-img-div {
-  
     display: flex;
     gap: 5px;
     align-items: flex-start;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ArrowLink from "../components/ArrowLink";
 
 const getImageUrls = () => {
   return [
@@ -48,9 +49,9 @@ const Rooms = () => {
                 
                 <Link to={`/booking/${chunkIndex * 3 + index}`} className="room-card">
                   <div className="hero-overlay r-overlay">
-                    <span className="small-text">
-                      SLEEPS 2 ADULTS. INCLUDES POOL
-                    </span>
+                    <div className="small-text flexCenter">
+                      <ArrowLink/>SLEEPS 2 ADULTS. INCLUDES POOL
+                    </div>
                   </div>
                   <img src={url} className="roomcard-img" alt={`Room ${chunkIndex * 3 + index + 1}`} />
                 </Link>
