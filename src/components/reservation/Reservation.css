@@ -1,55 +1,64 @@
 /* src/components/Reservation.css */
 .reservation-form {
-    margin: auto;
-    padding: 20px;
-    min-width: fit-content;
-    border-right: 1px solid #e2e2e2;
-  }
-  .input-btn-div{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .reservation-input {
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .reservation-label {
-   font-family: 'Times New Roman', Times, serif;
-   font-size: 1.5em;
-    margin: 10px 0 5px;
-  }
-  .form-btn-con{
-    display: flex;
-    align-items: flex-end;
-    padding: 10px;
-  }
-  .reservation-button {
-    
-    padding: 1em;
-    font-size: 16px;
-    width: 100%;
-    background-color: var(--secondaryGreen);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .reservation-button:hover {
-    background-color: #134728;
-  }
-  
-  .checkin-divs{
-    display: flex;
-    gap: 10px;
-    color: var(--secondaryGreen);
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-  }
+  margin: auto;
+  padding: 20px 2em;
+  width: 100%;
+/* Limit the maximum width for better readability on large screens */
+  border-right: 1px solid #e2e2e2;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
 
-.react-calendar{
+.input-btn-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Add space between columns */
+  margin-top: 20px; /* Add space between the calendars and the form inputs */
+}
+
+.reservation-input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%; /* Ensure the input takes the full width of its container */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width */
+}
+
+.reservation-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  margin: 10px 0 5px;
+}
+
+.form-btn-con {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.reservation-button {
+  padding: 1em;
+  font-size: 16px;
+  width: 100%;
+  background-color: var(--secondaryGreen);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.reservation-button:hover {
+  background-color: #134728;
+}
+
+.checkin-divs {
+  display: flex;
+  flex-direction: row; /* Stack the calendars vertically by default */
+  gap: 10px;
+  color: var(--secondaryGreen);
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.react-calendar {
   padding-top: 1em;
   border: none;
   border-bottom: 1px solid #e2e2e2;
@@ -57,16 +66,17 @@
   max-width: 100%;
   background: inherit;
   font-family: inherit;
-  line-height:inherit;
+  line-height: inherit;
+  box-sizing: border-box;
 }
 
-.react-calendar button{
+.react-calendar button {
   padding: 1em;
 }
 
-  .react-calendar__tile--active {
-    background: #000000;
-    color: white;
+.react-calendar__tile--active {
+  background: #000000;
+  color: white;
 }
 
 .react-calendar__navigation {
@@ -75,8 +85,32 @@
   margin: 1em 0;
 }
 
-.react-calendar__navigation__label__labelText, .react-calendar__navigation__label__labelText--from{  
+.react-calendar__navigation__label__labelText, .react-calendar__navigation__label__labelText--from {
   font-size: 1.5em;
   color: var(--secondaryGreen);
   font-family: 'Times New Roman', Times, serif;
+}
+.react-calendar__tile--active {
+  background-color: #134728;
+}
+@media only screen and (max-width: 650px) {
+  .reservation-form {
+    text-align: center;
+    /* Reduce padding for smaller screens */
+    border-right: none; /* Remove border for smaller screens */
+  }
+
+  .checkin-divs {
+    flex-direction: column; /* Stack the calendars vertically on smaller screens */
+  }
+
+  .input-btn-div {
+    display: block; /* Stack the form inputs and button vertically */
+    margin-top: 10px; /* Reduce the margin-top for smaller screens */
+  }
+
+  .form-btn-con {
+    padding: 0; /* Remove padding for smaller screens */
+    margin-top: 10px; /* Add margin-top to separate the button from the inputs */
+  }
 }

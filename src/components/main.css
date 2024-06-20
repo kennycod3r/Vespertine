@@ -1,95 +1,97 @@
+.main-text-area {
+ padding:0;
+ margin: 0;
+ min-height: fit-content;
+ position: relative;
+}
+
+.main-content {
+  padding: 4em 0;
+  text-align: center;
+  width: 100%;
+}
+
 .header-text {
-    font-family: sans-serif;
-    font-weight: 450;
-    font-size: larger;
-    margin-bottom: 1em;
+  font-family: sans-serif;
+  font-weight: 450;
+  font-size: larger;
+  margin-bottom: 1em;
+}
+
+.num {
+  color: #3c443f;
+}
+
+i {
+  font-family: "Times New Roman", Times, serif;
+  color: whitesmoke;
+}
+
+.sub-text {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.img-div-two, .img-div-one{
+  position: absolute;
+  height: 350px;
+  width: 300px;
+  overflow: hidden;
+  background-color: #3c443f;
+}
+
+.img-div-one{
+  top: 10px;
+  left: 0;
+}
+.img-div img,
+.img-div-two img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-div-two {
+  right: 0;
+  bottom: 10px;
+}
+
+.header-text h3 {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+@media only screen and (max-width: 750px) {
+  .header-text h3 {
+    font-size: small;
   }
-  
-  .num {
-    color: #3c443f;
-  }
-  
-  i {
-    font-family: 'Times New Roman', Times, serif;
-    color: whitesmoke;
-  }
-  
-  .tc {
-    text-align: center;
-  }
-  
-  .sub-text {
-    width: 350px;
-    margin: 0 auto;
-  }
-  
-  .sub-text-long {
-    width: 500px;
-    margin: 0 auto;
-  }
-  
-  .card-section {
-    display: flex;
-    overflow: hidden;
-    gap: 10px;
+
+  .main-text-area {
     padding: 1em;
   }
-  
-  .main-tg-section {
-    display: grid;
-    grid-template-columns: 2fr 8fr;
-    text-align: left;
-  }
-  
-  .main-tg-section p {
-    text-align: left;
-  }
-  
+
   .img-div,
   .img-div-two {
-    position: absolute;
-    height: 350px;
-    max-width: 300px;
-    overflow: hidden;
-    background-color: #3c443f;
+    display: none;
   }
-  
-  .img-div img,
-  .img-div-two img {
-    object-fit: cover;
-    overflow: hidden;
-    min-height: 100%;
+
+  .header-text {
+    font-size: small;
+    margin: 1rem;
   }
-  
-  .img-div {
-    left: 0;
-    top: 10px;
+
+  .sub-text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 10px;
   }
-  
-  .img-div-two {
-    right: 0;
-    bottom: 10px;
+
+  .main {
+    min-height: 60vh;
   }
-  
-  @media only screen and (max-width: 650px) {
-    .img-div,
-    .img-div-two {
-      display: none; /* Instead of visibility:hidden, use display:none to completely hide on smaller screens */
-    }
-    
-    .header-text {
-      font-size: small; /* Changed to semi-colon to terminate CSS properties */
-    }
-    
-    .sub-text {
-      width: 90%; /* Adjusted padding and margin for better responsiveness */
-      margin: 0 auto;
-      padding: 0 10px;
-      margin-top: 0;
-    }
-    
-    .main {
-      min-height: 60vh;
-    }
+
+  .button-container {
+    padding-top: 2em;
   }
-  
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Hero from "../components/hero/Hero";
 import ArrowLink from "../components/ArrowLink";
 
 const getImageUrls = () => {
@@ -34,36 +35,50 @@ const Rooms = () => {
 
   const chunks = chunkArray(imageUrls, 3);
 
+  const noStaticNav = true;
+  const heroImgUrl =
+    "https://mltgssx6sf05.i.optimole.com/cb:6EHZ.5d612/w:1620/h:1080/q:82/https://www.bystadium.com/wp-content/uploads/2023/03/happy-young-receptionist-in-uniform.jpg";
+
   return (
-    <section className="rooms-page">
-      <div className="fixed-sidebar">
-        <div className="room-header">
-          <h3>Rooms</h3>
-        </div>
-      </div>
-      <div>
-        {chunks.map((chunk, chunkIndex) => (
-          <div key={chunkIndex} className="rooms-container">
-            {chunk.map((url, index) => (
-              <div key={index} className="tal">
-                
-                <Link to={`/booking/${chunkIndex * 3 + index}`} className="room-card">
-                  <div className="hero-overlay r-overlay">
-                    <div className="small-text flexCenter">
-                      <ArrowLink/>SLEEPS 2 ADULTS. INCLUDES POOL
-                    </div>
-                  </div>
-                  <img src={url} className="roomcard-img" alt={`Room ${chunkIndex * 3 + index + 1}`} />
-                </Link>
-                <span className="small-text">
-                  IMAGE. ROOM LISTING {chunkIndex * 3 + index + 1}
-                </span>
-              </div>
-            ))}
+    <>
+      <Hero noStaticNav={noStaticNav} heroImgUrl={heroImgUrl} />
+      <section className="rooms-page">
+        <div className="fixed-sidebar">
+          <div className="room-header">
+            <h3>Rooms</h3>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+        <div>
+          {chunks.map((chunk, chunkIndex) => (
+            <div key={chunkIndex} className="rooms-container">
+              {chunk.map((url, index) => (
+                <div key={index} className="tal">
+                  <Link
+                    to={`/booking/${chunkIndex * 3 + index}`}
+                    className="room-card"
+                  >
+                    <div className="hero-overlay r-overlay">
+                      <div className="small-text flexCenter animateLink">
+                        <ArrowLink />
+                        SLEEPS 2 ADULTS. INCLUDES POOL
+                      </div>
+                    </div>
+                    <img
+                      src={url}
+                      className="roomcard-img"
+                      alt={`Room ${chunkIndex * 3 + index + 1}`}
+                    />
+                  </Link>
+                  <span className="small-text">
+                    IMAGE. ROOM LISTING {chunkIndex * 3 + index + 1}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

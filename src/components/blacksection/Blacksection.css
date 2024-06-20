@@ -1,57 +1,75 @@
-.blacksection{
-    background-color: #181818;
-    color: white;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 0;
-    position: relative;
-    min-height: fit-content;
-    border-bottom: none;
-    overflow: hidden;
+.blacksection {
+  background-color: #181818;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  min-height: fit-content;
+  border-bottom: none;
+  overflow: hidden;
 }
-
-.white-cutaway{
-    position: absolute;
-    min-height: 400px;
-    width: 400px;
-    background-color: #fff;
-    min-width: 200px;
-    text-align: center;
-    bottom: 10px;
-    z-index: 2;
-    padding: .5em;
-   
-    color: #181818;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.white-cutaway {
+  position: absolute;
+  min-height: 400px;
+  width: 400px;
+  background-color: #fff;
+  min-width: 200px;
+  text-align: center;
+  overflow: hidden;
+  bottom: 10px;
+  z-index: 2;
+  padding: 0.5em;
+  color: #181818;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.white-cutaway p{
-    margin-bottom: 10px;
+.white-cutaway p {
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
-
-.footer-header{
-    position: absolute;
-    margin-top: 5em;
+.footer-header {
+  position: absolute;
+  margin-top: 5em;
 }
-.white-cutaway-inner{
-    min-width: 200px;
-    height: 200px;
-    object-fit: contain;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('../../img/blackWhite.webp');
-    background-color: #181818;
+.white-cutaway-inner,
+.wci {
+  min-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #181818;
 }
-
+.white-cutaway-inner {
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: contain;
+  background-image: url("../../img/blackWhite.webp");
+}
+.white-cutaway-inner div {
+  display: none;
+}
+.bs-cut {
+  bottom: 0;
+  top: auto;
+}
 @media only screen and (max-width: 650px) {
-    /* .blacksection{
-      min-height: calc((5rem) * 8);
-      padding: (1.25em, 4vw, 2.5em);
-      width: calc(var(1em) * 1.75);
-      
-    } */
-    
+  .blacksection {
+    height: 70vh;
   }
+  .white-cutaway-inner div {
+    display: flex;
+    align-items: center;
+  }
+  .white-cutaway {
+    min-width: 100%;
+  }
+}

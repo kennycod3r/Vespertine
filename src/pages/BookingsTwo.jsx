@@ -47,7 +47,7 @@ const BookingsTwo = () => {
             <div className="p-d-img-div">
               <div className="p-d-img-div-inner">
                 <img
-                  src="https://www.chateauwittem.com/wp-content/uploads/2022/10/Chateau-Wittem-Superior-Room.webp"
+                  src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGhvdGVsJTIwbGF1Z2FnZXxlbnwwfHwwfHx8MA%3D%3D"
                   alt={`Product ${id}`}
                 />
               </div>

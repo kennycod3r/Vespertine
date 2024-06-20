@@ -1,17 +1,12 @@
-.main {
-  text-align: center;
-  padding: 20px;
-}
-
 .staff-section {
   background-color: var(--secondaryGreen);
   color: #fff;
   padding: 4em 0;
-  position: relative;
   position: sticky;
-  top: 0;
+  top: 2em;
   z-index: 1;
   min-height: 90vh;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -39,7 +34,7 @@
   background-color: whitesmoke;
   border: 1px solid rgba(151, 151, 151, 0.295);
   border-radius: 10px;
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--box-shadow-light);
   color: var(--secondaryGreen);
   margin-bottom: 25px;
   transition: all 200ms ease-in-out;
@@ -88,20 +83,35 @@
   margin-left: 0;
 }
 
+.staff-span {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
 @media only screen and (max-width: 650px) {
+  .staff-section {
+    min-height: 60vh;
+  }
+
+  .staff-section h1 {
+    font-size: 2.5em;
+    padding: 10px;
+  }
   .cover-img {
     width: 105px;
     height: 105px;
     border: 1px solid #4c4c4c;
-    object-fit: cover;
   }
-  .flex-con{
+  .flex-con {
     flex-wrap: wrap;
   }
-  .small-card{
+  .small-card {
     flex-grow: 1;
   }
-  .inner-flex-con{
+  .inner-flex-con {
     flex-wrap: wrap;
   }
 }

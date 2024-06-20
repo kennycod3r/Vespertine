@@ -1,87 +1,86 @@
-/* .inner-div {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    padding: 0 10px;
-  }
-  
-  .div-one ul {
-    font-size: 15px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .div-one div {
-    cursor: pointer;
-    transition: var(--animationSmooth);
-  }
-  
-  .nav-1{
-    text-align: left;
-  }
-  .nav-3{
-    text-align: right;
-  }
-  .div-three {
-    display: flex;
-    justify-content: flex-end;
-  } */
-  nav {
-    min-height: 5rem;
-    position: fixed;
-    padding: 0 20px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.051);
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-    pointer-events: all;
-    transition: all 200ms ease-in-out;
-  }
+/* Navbar.css */
 
-  .inner-div {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: calc(var(--gap)* 0.6) 0;
-  }
-
-  .div-one ul {
-    font-size: 15px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  @media only screen and (max-width: 650px) {
-    nav {
-      position: fixed;
-      padding:5px 2px;
-    }
-    .nav-3{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-      }
-    
-      .nav-3 > button{
-        min-width: 90px;
-        border-radius: 3px;
-      }
-    
-      .div-two{
-        font-weight: 700;
-        color: var(--secondaryGreen);
-        font-size: 1.3em;
-      }
+nav {
+  min-height: 5rem !important;
+  position: fixed;
+  padding: 0 20px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  pointer-events: all;
+  transition: all 200ms ease-in-out;
+  box-shadow: var(--box-shadow-light);
 }
+
+.inner-div {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-one ul {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 15px;
+  transform: translateX(0);
+  transition: all 200ms ease;
+}
+
+.div-one li p{
+  font-size: 14px;
+  color: black;
+  transition: all 200ms ease-in-out;
+}
+
+.div-one li:hover {
+  transform: translateX(2px);
+  opacity: 0.7;
+}
+
+.div-two {
+  font-weight: 700;
+  color: var(--secondaryGreen);
+  font-size: 1.3em;
+}
+
+.nav-3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 650px) {
+  nav {
+    padding: 5px 2px;
+  }
+
+  .nav-3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-3 > button {
+    min-width: 90px;
+    border-radius: 3px;
+  }
+
+  .div-two {
+    font-size: 1.3em;
+  }
+
+  .show-big {
+    display: none;
+  }
+}
+
+

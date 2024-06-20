@@ -2,12 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
   padding: 0;
   position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .hero {
-  min-height: 93vh;
+  min-height: 95vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -22,10 +26,11 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-  background-color: transparent;
   width: 100%;
   display: grid;
   grid-template-columns: 4fr 10fr;
+  align-items: center;
+  overflow: hidden;
   height: 50px;
 }
 
@@ -35,14 +40,22 @@
   grid-template-columns: 1fr 1fr 1fr;
   text-align: left;
   height: 100%;
+  width: 100%;
+  overflow: hidden !important;
   align-items: center;
   padding: 10px;
+  line-height: 1.1;
+  cursor: pointer;
 }
 
-.view-hero-header-details p, .boldp {
-  font-size: 13px;
-  color: black;
+.view-hero-header-details p {
+  font-size: 12px;
   font-weight: 700;
+}
+
+.view-hero-header-details div {
+  align-items: center;
+  display: flex;
 }
 
 .static-nav {
@@ -53,11 +66,12 @@
   padding: 10px 20px;
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid rgba(66, 66, 66, 0.733);
+  border-bottom: 1px solid rgba(113, 113, 113, 0.733);
   backdrop-filter: blur(0.5em);
   justify-content: space-between;
-  z-index: 50;
+  z-index: 15;
   min-height: 5rem;
+  overflow: hidden;
   transition: all 200ms ease-in-out;
 }
 
@@ -71,10 +85,16 @@
   left: 0;
   height: 100%;
   width: 100%;
-}
-
-.h-overlay-bc {
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.53);
+}
+.view-hero-header-details .flexCenter{
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.view-hero-header-details .flexCenter:hover{
+  gap: 20px;
+  opacity: 0.7;
 }
 
 .hero-text-main {
@@ -96,14 +116,42 @@
   color: white;
 }
 
+.static-nav-btn{
+  padding: 0;
+  height: 10px;
+}
+.explore-text {
+  background-color: transparent;
+  color: white;
+}
+.animateLink{
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.animateLink:hover{
+  gap: 20px;
+  opacity: 0.7;
+}
+
 @media only screen and (max-width: 650px) {
   .hero {
     min-height: calc(5rem * 8);
     padding: 1.25em 4vw 2.5em;
     min-width: 100%;
+    overflow: hidden;
   }
 
   .view-hero-header-details {
     text-align: center;
+  }
+
+  .view-hero-header-details p {
+    font-size: 8px;
+    align-items: baseline;
+  }
+
+  .small-hide {
+    display: none;
   }
 }

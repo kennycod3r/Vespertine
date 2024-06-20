@@ -73,7 +73,7 @@ const Reservation = ({ onSubmit }) => {
         />
       </div>
       <div className="form-btn-con"><button className="btn-reg reservation-button" type="submit">
-        Book Now
+        Book Room
       </button></div>
       </div>
     </form>

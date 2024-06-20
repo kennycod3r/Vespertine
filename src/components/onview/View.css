@@ -1,78 +1,67 @@
 .view-section {
-  display: grid;
   position: relative;
-  grid-template-columns: 4fr 10fr;
-  text-align: left;
   padding: 0;
   border: none;
   margin: 0;
-  min-height: 30vh;
   overflow: hidden;
-  width: 100%;
-}
-
-.view-header {
-  padding-right: 1em;
+  min-width:100%;
+  background-color: var(--secondaryGreen);
+  background-image: url("../../img/view.webp");
+  background-position: center;
+  background-size: contain;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.524);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  z-index: 4;
+  align-items: baseline;
+  justify-content: flex-start;
 }
 
-.view-list-container {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
-
-.view-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.view-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  min-height: 300px;
-  width: calc(100% + 2px);
-  min-height: 100%;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.view-overlay {
+.absolute-open {
   position: absolute;
+  box-shadow: var(--box-shadow-light);
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 0;
+  align-items: flex-start;
+  width: 27%;
   color: #fff;
-  transition: opacity 0.3s;
-}
-
-.view-card:hover .view-overlay {
-  opacity: 1;
-}
-
-.view-overlay-text {
-  font-size: 12px;
-  color: #fff;
-}
-
-.view-image {
-  width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+.fa {
+  padding: 0.7em 1em;
+  min-width: 100%;
+  border-right: 1px solid black;
+}
+.absolute-open p:first-child {
+  padding: 1em;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #7e7e7e;
 }
 
+.absolute-open h1 {
+  margin: 2em 0;
+  font-size: 2.3em;
+}
 @media only screen and (max-width: 650px) {
   .view-section {
-    display: none;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .absolute-open {
+    position: static;
+    width: 50%;
+    min-height: fit-content;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.616);
+  }
+  .absolute-open h1 {
+    margin: .5em 0;
+    font-size: 2em;
+    line-height: normal;
   }
 }
