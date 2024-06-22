@@ -1,118 +1,303 @@
-.services-section{
-    position: relative;
-  }
-  .serviceHero{
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    max-height: 90vh;
-  }
-  
-  
-  .service-hero-text h2{
-    line-height: .750;
-    text-align: left;
-  }
-  
-  .green-service-section{
-    background-color: var(--secondaryGreen);
-    color: #fff;
-    padding: 4em;
-    position: relative;
-  }
+/* src/components/Services.css */
+.services-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  background-color: var(--secondaryGreen);
+}
 
-  .green-service-section-grid{
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-  }
-  .green-service-section-inner{
+.serviceHero {
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  max-height: 90vh;
+  position: relative;
+}
+
+.serviceHero img {
+  max-height: 90vh;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.service-hero-text h2 {
+  line-height: 0.75;
+  padding: 0 1em;
+  text-align: left;
+}
+
+.green-service-section {
+  padding: 5em 1em;
+  padding-bottom: 1em;
+  position: relative;
+}
+
+.green-service-section-grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 4fr 2fr;
+}
+
+.green-service-section-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1em;
+  text-align: left;
+  flex-direction: column;
+}
+
+.authors {
+  display: flex;
+  width: 100%;
+  gap: 2em;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.authors div {
+  border-left: 4px solid #161d15;
+  padding-left: 20px;
+}
+
+.service-overlay {
+  color: #fff;
+  display: grid;
+  overflow: visible;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-overlay .so-g {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.so-g2 {
+  position: absolute;
+  top: 7em;
+  z-index: 20;
+  right: 10%;
+}
+
+.authors div p {
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.serviceHero {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.ser-form {
+  background-color: #161d15;
+  padding: 2em;
+  min-width: 350px;
+  border: 3px solid #161d15;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: fit-content;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #3b3b3b;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  background-color: #07360b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--secondaryGreen);
+}
+
+.event-packages {
+  min-width: 100%;
+}
+
+.services-whiteSection {
+  margin-top: 1em;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.section-packages-cards,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.single-packages-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #161d15;
+  overflow: hidden;
+  min-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-packages-card img {
+  padding: 1em;
+}
+
+.spc-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  min-height: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 100% !important;
+  background-image: url("https://birchevents.com/wp-content/uploads/2023/11/12059_240525_RenataAndrew-768x1152.jpg.webp");
+}
+
+.single-packages-card .fC {
+  margin: 1em;
+  color: pink;
+}
+
+.SPC-DIV2 {
+  background-image: url("https://birchevents.com/wp-content/uploads/2024/01/eo8-768x1024.jpg.webp");
+}
+
+.card-content {
+  margin-top: 0;
+  padding: 2em;
+  transition: var(--animationSmooth);
+  background-color: var(--secondaryGreen);
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  min-height: 100%;
+  transform: translateY(100%);
+}
+
+.single-packages-card:hover .card-content {
+  background-color: var(--secondaryGreen);
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.row > .col {
+  width: 100%;
+}
+
+.card-content {
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .row {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
     flex-direction: column;
-    gap: 4em 0;
-  }
-  
-  .authors{
-    display: flex;
-    width: 100%;
     gap: 2em;
   }
-  
-  .authors div{
-    border-left: 4px solid black;
-    padding-left: 20px;
-  }
-  .service-overlay{
-    color: #fff;
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: 1fr 1fr;
-  }
-  .service-overlay .so-g{
-   min-height: 100%;
-   display: flex ;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-  }
-  .authors div p{
-    font-size: 14px;
-    line-height: 1.1;
-  }
-  .serviceHero{
-    min-height: 100%;
+
+  .services-card {
     min-width: 100%;
+    height: 400px;
   }
-  
-  .ser-form{
-    background-color: #161d15;
-    padding: 2em;
-    min-width: 350px;
-    border: 3px solid #161d15;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    text-align: left;
-  }
-  
-  .form-group {
-    margin-bottom: 1em;
-  }
-  
-  .form-group label {
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    border: 1px solid #3b3b3b;
-  }
-  .form-group textarea {
-    min-width: 100%;
-    height: 200px;
-  }
-  .submit-button {
-    padding: 10px 15px;
-    background-color: #07360b;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
+
+  .ser-form {
+    margin-top: 2em;
     width: 100%;
   }
-  
-  .submit-button:hover {
-    background-color: var(--secondaryGreen);
+
+  .service-hero-text h2 {
+    font-size: 2em;
   }
-  
-  @media (max-width: 650px) {
-    .services-div h1{
-      font-size: 2em;
-    }
-    .green-service-section{
-      padding: 4em 1em;
-    }
+
+  .green-service-section-inner h2 {
+    font-size: larger;
+    text-align: center;
+  }
+
+  .authors {
+    font-size: 13px;
+    margin-bottom: 1em;
+  }
+
+  .green-service-section-grid {
+    display: block;
+  }
+
+  .green-service-section-inner {
+    text-align: center;
+    align-items: center;
+    gap: 3em;
+    display: block;
+  }
+
+  .services-whiteSection {
+    overflow: hidden;
+  }
+
+  .service-overlay {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .so-g2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: static;
+    margin-top: 1em;
+  }
+
+  .services-whiteSection {
+    flex-direction: column;
+  }
+
+  .services-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35em;
+  }
 }

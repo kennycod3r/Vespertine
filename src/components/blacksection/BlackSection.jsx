@@ -11,7 +11,7 @@ const BlackSection = ({ dinner }) => {
       <section className="main blacksection">
         <div className="header-text footer-header">
           <h2>Extraordinary</h2>
-          <h2>Experiences</h2>  
+          <h2>Experiences</h2>
         </div>
         <div>
           <Suspense fallback={<div>Loading...</div>}>
@@ -19,17 +19,22 @@ const BlackSection = ({ dinner }) => {
               src={dinner ? dinnerF : blackWhite}
               alt="black and white"
               loading="lazy"
+              className="hidemobile"
             />
           </Suspense>
         </div>
         <div className="white-cutaway bs-cut">
-          
           <p className="boldp">{dinner ? "viewsocials" : "vespertine"}</p>
-          <div className="white-cutaway-inner">
-          <div className="small-text flexCenter animateLink">
-            <ArrowLink />
-            EXPLORE OUR hISTORY
-          </div>
+          <div
+            className="white-cutaway-inner"
+            style={{ backgroundImage: `url(${dinner ? dinnerF : blackWhite})` }}
+          >
+            <div className="hero-overlay wc-overlay">
+              <div className="small-text flexCenter animateLink">
+                <ArrowLink />
+                {dinner ? "EXPLORE OUR ROOMS" : "EXPLORE OUR hISTORY"}
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,9 +1,7 @@
-/* Navbar.css */
-
 nav {
   min-height: 5rem !important;
   position: fixed;
-  padding: 0 20px;
+  padding: 0 15px;
   width: 100%;
   top: 0;
   left: 0;
@@ -11,45 +9,43 @@ nav {
   align-items: center;
   z-index: 99;
   pointer-events: all;
-  transition: all 200ms ease-in-out;
+  transition: var(--transitionSmooth);
   box-shadow: var(--box-shadow-light);
+  will-change: opacity, backdrop-filter;
 }
 
 .inner-div {
   width: 100%;
-  align-items: center;
   text-align: center;
   padding: 0 14px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-content: space-evenly;
   align-items: center;
-  justify-content: space-between;
+  justify-items: stretch;
 }
 
 .div-one ul {
-  font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: flex-start;
   gap: 15px;
-  transform: translateX(0);
-  transition: all 200ms ease;
+  overflow: hidden;
+  transition: var(--transitionSmooth);
+  align-content: center;
+  flex-wrap: no-wrap;
 }
 
-.div-one li p{
+.div-one li p {
   font-size: 14px;
   color: black;
-  transition: all 200ms ease-in-out;
-}
-
-.div-one li:hover {
-  transform: translateX(2px);
-  opacity: 0.7;
+  transition: all 0.8s cubic-bezier(0.3, 1, 0.3, 1);
+  
 }
 
 .div-two {
   font-weight: 700;
-  color: var(--secondaryGreen);
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .nav-3 {
@@ -83,4 +79,45 @@ nav {
   }
 }
 
+/* Link animations */
+.nav-link-click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  min-width: 100%;
+  transition: 0.8s cubic-bezier(0.3, 1, 0.3, 1) ease-in-out;
+  will-change: transform;
+}
 
+.nav-link-click p {
+  position: relative;
+  transform: translateY(0);
+  width: 100%;
+  height: 100%;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-click p::after {
+  content:  attr(data-hover);;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  transform: translateY(100%);
+  transition: all 0.8s cubic-bezier(0.3, 1, 0.3, 1);
+}
+
+.nav-link-click:hover p {
+  transform: translateY(-143%);
+}
+
+.nav-link-click:hover p::after {
+  transform: translateY(100%);
+}

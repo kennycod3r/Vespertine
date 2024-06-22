@@ -25,12 +25,7 @@ img {
   text-transform: capitalize;
 }
 
-.main-text-area {
-  padding-top: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .icon-grid {
   display: flex;
   justify-content: center;
@@ -48,14 +43,6 @@ img {
   border-left: 1px solid silver;
 }
 
-.main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: left;
-  gap: 20px;
-  max-width: 90%;
-  padding: 1em;
-}
 .span-instruct {
   position: absolute;
   bottom: 10px;
@@ -104,13 +91,14 @@ img {
 .r-overlay {
   color: white;
   background: rgba(0, 0, 0, 0.247);
-  transition: all 200ms ease-out;
+  transition:var(--transitionSmooth);
   z-index: 1;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
+  will-change: opacity;
 }
 
 .r-overlay:hover {
@@ -182,7 +170,19 @@ img {
   font-size: 0.5em;
   border-bottom: 0.1px solid silver;
 }
+
+.room-header h3 {
+  font-size: large;
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 650px) {
+  .room-header {
+    padding-bottom: 20px;
+    background-color: var(--secondaryGreen);
+    color: white;
+    border-bottom: 1px solid rgb(217, 217, 217);
+  }
   .main {
     padding: 0 2em;
   }
@@ -199,17 +199,6 @@ img {
 
   .SS-overlay {
     opacity: 1;
-  }
-
-  .room-header h3 {
-    font-size: large;
-    font-weight: 800;
-    color: var(--secondaryGreen);
-  }
-
-  .room-header {
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(217, 217, 217);
   }
 
   .rooms-container {
@@ -237,6 +226,10 @@ img {
     min-width: 100%;
     object-fit: contain;
   }
+
+  .room-header{
+    padding: 1em;
+  }
 }
 .product-detail-list {
   padding: 1em;
@@ -248,7 +241,4 @@ img {
   display: flex;
   align-items: center;
   gap: 1em;
-}
-.plantsvg {
-  height: 40px;
 }

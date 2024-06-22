@@ -1,13 +1,22 @@
-
-.services-div{
+.services-div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 40px;
 }
+
+.logo-div-kids img {
+  width: 100px;
+}
+
 .kids-section {
-  background-color:#161d15;
+  background-color: #161d15;
+  background-image: url(../assets/vespertineBlack.svg);
+  background-size: cover;
+  max-height: min-content;
+  max-width: 100%;
   color: #fff;
+  overflow: hidden;
   padding: 4em 0;
   min-height: fit-content;
   border-bottom: #aeaeae;
@@ -16,23 +25,11 @@
 .kids-card-image {
   position: relative;
   min-height: 70vh;
-  overflow: hidden;
+  cursor: pointer;
   z-index: 19;
-  text-align: left;
-}
-
-.kidscard img {
-  height: 300px;
-  object-fit: cover;
-}
-
-.kids-card-image h1 {
-  font-size: 3rem;
-  letter-spacing: normal;
 }
 
 .kidscard {
-  background-color: #fff;
   min-width: 350px;
   min-height: 350px;
   background-position: center;
@@ -40,85 +37,50 @@
   background-repeat: no-repeat;
   padding: 10px 2px;
   overflow: hidden;
-  transform: rotate(3deg);
   position: absolute;
   bottom: 50px;
   left: 40% !important;
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.058);
   background-image: url("https://images.unsplash.com/photo-1525829424145-8539ba2df303?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  transition: transform 0.3s ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .kidscard:hover {
   transform: scale(1.05);
 }
 
-.butterflysvg {
+.butterflysvg img {
   position: absolute;
-  left: 33% !important;
+  left: 19% !important;
   top: 20%;
-  z-index: 1;
+  z-index: 199;
+  border-radius: 50%;
+  background-color: var(--secondaryPink);
+  padding: 1em;
+  width: 70px;
+  height: 70px;
 }
 
 .pinsvg {
   position: absolute;
-  z-index: 1;
+  z-index: 140;
+  top: 0;
+  left: 50% !important;
+}
+
+.card1 {
+  transition: var(--animationSmooth);
+  background-image: url("https://images.unsplash.com/photo-1627222295124-f8b3fc09e47f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGljZWNyZWFtfGVufDB8fDB8fHww");
 }
 
 .card2 {
-  transform: rotate(-10deg);
-}
-
-.card3 {
-  transform: rotate(-20deg);
+  transition: var(--animationSmooth);
+  background-image: url("https://images.unsplash.com/photo-1560106952-abd9130296c9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjcwfHxkZXNzZXJ0fGVufDB8fDB8fHww");
 }
 
 .relative-con {
   position: relative;
 }
-
-.dinning {
-  font-size: 1.5em;
-  min-width: 100%;
-}
-
-.dinning-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  align-items: center;
-  padding: 2em;
-  background-color: var(--bg-peach);
-}
-
-.dinning-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1em;
-}
-
-.border-line {
-  border-bottom: 2px solid #000;
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
-}
-
-.subtitle {
-  font-size: 1em;
-  color: #555;
-}
-
-.dinning-image {
-  width: 100%;
-  min-height: 450px;
-  background-size: contain;
-  padding: 10px;
-  background-color: #555;
-  background-image: url("https://images.unsplash.com/photo-1580554530778-ca36943938b2?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-}
-
-
 
 .link-copy__icon {
   height: 10px;
@@ -137,6 +99,7 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
+  transition: var(--transitionSmooth);
 }
 
 .flex-time-co {
@@ -158,8 +121,9 @@
   min-height: 40px;
   border: none;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.822);
-  transition: background-color 0.3s ease-in-out;
+  background-color: #0d110c;
+  will-change: background-color;
+  transition: var(--transitionSmooth);
 }
 
 .res-complete-div:hover {
@@ -183,34 +147,42 @@
 }
 
 .fixed-reserve-restaurant {
-  background-color: #22211e;
+  background-color: #161d15;
   position: fixed;
   color: #fff;
-  top: 20.8%;
+  border: 1px solid rgb(69, 93, 89);
+  top: 25.8%;
   text-align: left;
-  transition: transform 0.3s ease-in-out;
-  right: 6.1%;
+  transition: var(--animationSmooth);
+  will-change: transform;
+  right: 1.1%;
   width: 300px;
   z-index: 70;
   box-shadow: 0 0 10px rgba(33, 32, 32, 0.11);
 }
+
 .fixed-reserve-restaurant.open {
   transform: translateY(0);
 }
-.fixed-reserve-restaurant input, select{
+
+.fixed-reserve-restaurant input,
+select {
   border: 0.1px solid #6c6c6cd6;
 }
-.fixed-reserve-restaurant label{
+
+.fixed-reserve-restaurant label {
   font-size: small;
 }
-.fixed-reserve-restaurant ul h3{
+
+.fixed-reserve-restaurant ul h3 {
   font-size: 17px;
 }
+
 .mobile-reservation-toggle {
   display: none;
   border: 0.1px solid rgba(214, 214, 214, 0.685);
   padding: 10px;
-  min-width:80px;
+  min-width: 80px;
   border-radius: 50%;
   min-height: 80px;
   cursor: pointer;
@@ -219,8 +191,14 @@
   right: 10px;
   font-weight: 600;
   z-index: 80;
-  transition: all 200ms ease-out;
+  background-color: #161d15;
+  transition: var(--transitionSmooth);
   box-shadow: var(--box-shadow-light);
+}
+
+.Pillowsvg{
+  height: 40px;
+  width: 40px;
 }
 
 @media (max-width: 650px) {
@@ -229,9 +207,12 @@
     min-width: 250px;
     min-height: 250px;
   }
-  .kids-card-image{
+
+  .kids-card-image {
     min-height: 60vh;
+    overflow: hidden;
   }
+
   .fixed-reserve-restaurant {
     min-height: 100vh;
     width: 100%;
@@ -271,9 +252,13 @@
   .mobile-reservation-toggle {
     display: block;
     background-color: #fff;
-    color: #000;
   }
-  .kids-section .svg{
-    display: none;
+
+  .butterflysvg img {
+    background-color: var(--secondaryGreen);
+  }
+
+  .pinsvg {
+    top: 30px;
   }
 }

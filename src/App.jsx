@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from './components/Footer/Footer';
@@ -9,9 +9,20 @@ import useLenis from "./hooks/UseLennis";
 import Dinning from "./pages/Dinning";
 import Services from "./pages/Services";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Loading from './components/Loader/Loading';
 
 function App() {
   useLenis();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust the delay as needed
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const [openSidebar, setOpenSidebar] = useState(false);
 
@@ -19,11 +30,15 @@ function App() {
     setOpenSidebar(prevState => !prevState);
   }
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <Router>
       <div className="wrapper">
-        <Navbar handleSidebar={handleSidebar} openSidebar={openSidebar}/>
-        <Sidebar openSidebar={openSidebar} handleSidebar={handleSidebar}/>
+        <Navbar handleSidebar={handleSidebar} openSidebar={openSidebar} />
+        <Sidebar openSidebar={openSidebar} handleSidebar={handleSidebar} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rooms" element={<Rooms />} />
@@ -31,8 +46,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/booking/:id" element={<BookingsTwo />} />
         </Routes>
-      </div>
         <Footer />
+      </div>
     </Router>
   );
 }

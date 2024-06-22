@@ -46,16 +46,19 @@
   background-color: #181818;
 }
 .white-cutaway-inner {
-  object-fit: contain;
+  position: relative;
+  object-fit: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  background-size: contain;
-  background-image: url("../../img/blackWhite.webp");
+  background-size: cover;
 }
-.white-cutaway-inner div {
-  display: none;
+.wc-overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.154);
 }
 .bs-cut {
   bottom: 0;
@@ -63,13 +66,19 @@
 }
 @media only screen and (max-width: 650px) {
   .blacksection {
-    height: 70vh;
+    height: 40vh;
+    overflow: hidden;
   }
   .white-cutaway-inner div {
     display: flex;
     align-items: center;
   }
+
+  .hidemobile{
+    display: none;
+  }
   .white-cutaway {
     min-width: 100%;
+    min-height: 100%;
   }
 }

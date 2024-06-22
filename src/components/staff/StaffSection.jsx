@@ -48,7 +48,7 @@ const StaffSection = ({cheffText }) => {
                   className="cover-img u--rel"
                 />
                 <div className="chef-name">
-                  <p>chef name 1</p>
+                  <p>resturant img 1</p>
                 </div>
               </div>
             );

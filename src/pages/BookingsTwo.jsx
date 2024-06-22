@@ -1,8 +1,9 @@
 import React from "react";
 import View from "../components/onview/View";
 import { useParams } from "react-router-dom";
-import Hero from "../components/hero/Hero";
-import Plant from "../assets/plant.svg";
+import './Card.css';
+
+import Pillow from "../assets/pillows.svg";
 import Reservation from "../components/reservation/Reservation";
 const getImageUrls = () => {
   return [
@@ -61,13 +62,14 @@ const BookingsTwo = () => {
           </div>
           <div>
             <div className="product-header">
-              <h2>Product Detail</h2>
+            <div>
+                  <img className="Pillowsvg" src={Pillow} alt="icon" />
+                </div>{" "}
+              <h2>Booking Detail</h2>
             </div>
             <div className="product-detail-list">
               <div className="flexsvg-header">
-                <div>
-                  <img className="plantsvg" src={Plant} alt="icon" />
-                </div>{" "}
+                
                 <p className="boldp">BEDS</p>
               </div>
               <p className="small-text">
@@ -75,9 +77,7 @@ const BookingsTwo = () => {
               </p>
             </div>
             <div className="product-detail-list">
-              <div>
-                <img className="plantsvg" src={Plant} alt="icon" />
-              </div>
+              
               <p className="boldp">OCCUPANCY</p>
               <p className="small-text">
                 King bed: 3 adults, or 2 adults and 1 child
@@ -87,25 +87,19 @@ const BookingsTwo = () => {
               </p>
             </div>
             <div className="product-detail-list">
-              <div>
-                <img className="plantsvg" src={Plant} alt="icon" />
-              </div>
+              
               <p className="boldp">SIZE</p>
               <p className="small-text">450 sq. ft. 42 m2</p>
               <p className="small-text">5th floor</p>
             </div>
             <div className="product-detail-list">
-              <div>
-                <img className="plantsvg" src={Plant} alt="icon" />
-              </div>
+              
               <p className="boldp">BATHROOM</p>
               <p className="small-text">One full marble bathroom</p>
             </div>
 
             <div className="product-detail-list">
-              <div>
-                <img className="plantsvg" src={Plant} alt="icon" />
-              </div>
+             
               <p className="boldp">UNIQUE FEATURES</p>
               <p className="small-text">
                 Outdoor living space with intimate seating + pool

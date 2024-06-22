@@ -37,7 +37,7 @@
   box-shadow: var(--box-shadow-light);
   color: var(--secondaryGreen);
   margin-bottom: 25px;
-  transition: all 200ms ease-in-out;
+  transition: var(--transitionSmooth);
 }
 
 .chef-name {
@@ -46,7 +46,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  transition: all 200ms ease-in-out;
+  transition: var(--transitionSmooth);
   opacity: 0;
   display: flex;
   align-items: flex-end;
@@ -55,7 +55,7 @@
 
 .chef-name:hover {
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition:var(--transitionSmooth);
 }
 
 .small-card {

@@ -29,9 +29,10 @@
   width: 100%;
   display: grid;
   grid-template-columns: 4fr 10fr;
-  align-items: center;
+  align-items: baseline;
   overflow: hidden;
   height: 50px;
+  justify-items: stretch;
 }
 
 .view-hero-header-details {
@@ -72,7 +73,7 @@
   z-index: 15;
   min-height: 5rem;
   overflow: hidden;
-  transition: all 200ms ease-in-out;
+  transition: var(--transitionSmooth);
 }
 
 .static-nav p {
@@ -90,7 +91,7 @@
 }
 .view-hero-header-details .flexCenter{
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+  transition: var(--transitionSmooth);
 }
 .view-hero-header-details .flexCenter:hover{
   gap: 20px;
@@ -123,10 +124,17 @@
 .explore-text {
   background-color: transparent;
   color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 20px;
+  justify-content: baseline;
+
 }
 .animateLink{
-  transition: all 200ms ease-in-out;
+  transition:var(--transitionSmooth);
   cursor: pointer;
+  will-change: opacity, gap;
 }
 
 .animateLink:hover{

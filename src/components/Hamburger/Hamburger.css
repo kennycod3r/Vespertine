@@ -85,6 +85,7 @@
   .hamburger {
     padding:1em;
     cursor: pointer;
+    will-change: auto;
     overflow: hidden;
     border: none;
     background-color: transparent;

@@ -1,14 +1,18 @@
 .main-text-area {
- padding:0;
+ padding:4em 0;
  margin: 0;
  min-height: fit-content;
  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-content {
   padding: 4em 0;
   text-align: center;
   width: 100%;
+  transition: all 200ms ease;
 }
 
 .header-text {
@@ -62,7 +66,7 @@ i {
   line-height: 1.1;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 700px) {
   .header-text h3 {
     font-size: small;
   }
@@ -93,5 +97,28 @@ i {
 
   .button-container {
     padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 710px) {
+  .img-div,
+  .img-div-two {
+   z-index: -1;
+  }
+  .main-content{
+    background-color: #fff;
+    max-width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .img-div,
+  .img-div-two {
+   z-index: 1;
+  }
+  .main-content{
+    background-color: #fff;
+    max-width: auto;
+    padding: 0;
+    transition: var(--transitionSmooth);
   }
 }

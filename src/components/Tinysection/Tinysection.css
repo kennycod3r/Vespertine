@@ -13,7 +13,7 @@
   top: 40px;
   text-align: center;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
   .tinysection {
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@
     justify-content: center;
     overflow: hidden;
   }
+
   .ss-white-cut {
     position: static !important;
     border: 0.1px solid rgb(211, 211, 211);

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import HamburgerMenu from "../Hamburger/HamburgerMenu";
 
-
 const Navbar = ({ handleSidebar, openSidebar }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -26,40 +25,56 @@ const Navbar = ({ handleSidebar, openSidebar }) => {
     opacity: isVisible ? 1 : 0,
     borderBottom: isVisible ? "1px solid #D2D2D2" : "inherit",
     backgroundColor: isVisible ? "#fff" : "inherit",
-    backdropFilter: isVisible ? "blur" : "inherit",
-    transition:  isVisible ? "all 200ms ease": "all 0.4s cubic-bezier(0.3, 0, 0.3, 1)",
+    backdropFilter: isVisible ? "blur(10px)" : "inherit",
+    transition: "all 200ms ease",
   };
 
   return (
     <nav id="Navbar" style={styles}>
       <div className="inner-div">
         <div className="div-one" id="sidebar">
-          <ul>
+          <ul className="main-nav-bar">
             <li>
-              <HamburgerMenu handleSidebar={handleSidebar} openSidebar={openSidebar}/>
+              <HamburgerMenu handleSidebar={handleSidebar} openSidebar={openSidebar} />
             </li>
             <li className="show-big animateLink">
               <Link to="/">
-                <p className="boldp">HOME</p>
+                <div className="nav-link-click">
+                  <p className="boldp" data-hover="HOME">HOME</p>
+                </div>
               </Link>
             </li>
-            <li className="show-big animateLink">
-              <Link to="/dinning">
-                <p className="boldp">DINNING</p>
+            <li className="show-big din-li animateLink">
+              <Link to="/dinning" id="animateNav">
+                <div className="nav-link-click">
+                  <p className="boldp" data-hover="DINING">DINING</p>
+                </div>
               </Link>
             </li>
             <li className="show-big animateLink">
               <Link to="/rooms">
-                <p className="boldp">ROOMS</p>
+                <div className="nav-link-click">
+                  <p className="boldp" data-hover="ROOMS">ROOMS</p>
+                </div>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="div-one div-two headtext-small">VESPERTINE</div>
+        <div className="div-one div-two">VESPERTINE</div>
         <div className="div-one nav-3">
           <ul>
-            <li className="boldp show-big"><p className="boldp">SERVICES</p></li>
-            <li className="boldp show-big"><p className="boldp">SERVICES</p></li>
+            <li className="show-big animateLink">
+              <Link to="/services">
+                <div className="nav-link-click">
+                  <p className="boldp" data-hover="SERVICES">SERVICES</p>
+                </div>
+              </Link>
+            </li>
+            <li className="boldp show-big">
+              <div className="nav-link-click">
+                <p className="boldp" data-hover="BOOKING">BOOKING</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

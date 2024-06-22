@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Plant from "../../assets/plant.svg";
+import Logo from "../../util/Logo/Logo";
 import "./Hero.css";
 import ArrowLink from "../ArrowLink";
 import Button from "../../util/Button/Buttons";
@@ -49,15 +49,14 @@ const Hero = ({ noStaticNav, heroImgUrl }) => {
       >
         <div className="hero-overlay"></div>
         <div className="hero-text-main">
-          <div>
-            <img className="svg small-text" src={Plant} alt="Plant" />
-          </div>
+          <Logo hero={"hero"}/>
           <p className="small-text">HOTEL RESORT — LOVINA, BALI</p>
         </div>
       </div>
       <div className="view-hero-header">
         <div className="explore-text">
-          <p className="small-text"> ↓ EXPLORE </p>
+          <p className="small-text">↓</p>
+          <p className="small-text">EXPLORE</p>
         </div>
         <div className="view-hero-header-details">
           <div className="flexCenter">

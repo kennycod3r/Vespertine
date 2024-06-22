@@ -1,21 +1,14 @@
 :root {
   font-family: "Nunito Sans", sans-serif, Arial;
   font-synthesis: none;
+  --transitionSmooth: all .4s ease;
+  --animationSmooth: all .4s ease;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --box-shadow-light:0 40px 24px rgba(0, 0, 0, 0.021), 0 18px 18px rgba(0, 0, 0, 0.03),
-  0 4px 10px rgba(0, 0, 0, 0.03);
-  --color-dark-rgb: 0, 0, 0;
-  --color-dark: rgba(var(--color-dark-rgb), 1);
-  --animation-nav: 0.4s cubic-bezier(0.3, 0, 0.3, 1);
-  --border-radius: 2em;
-  --box-shadow: 0 0 10px #0909098d;
-  --font-size-small: clamp(16px, 1.2vw, 19px);
-  --color-dark: #1c1d20;
-  --color-blue: #455ce9;
-  --color-blue-dark: #334bd3;
-  --color-gray: #999d9e;
+  --box-shadow-light: 0 40px 24px rgba(0, 0, 0, 0.021),
+    0 18px 18px rgba(0, 0, 0, 0.03), 0 4px 10px rgba(0, 0, 0, 0.03);
+
   --color-lightgray: #e9eaeb;
   --primaryGreen: rgba(0, 21, 20, 1);
   --color-white: #fff;
@@ -51,15 +44,12 @@
 
 /* For Firefox */
 html {
-  scrollbar-width: thin; 
+  scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-color: var(--secondaryGreen) #f1f1f1; /* Sets thumb and track colors */
 }
 
-.heroTwo {
-  width: 90%;
-  padding: 10px;
-}
+
 .button-container {
   display: flex;
   align-items: center;
@@ -67,7 +57,11 @@ html {
   width: 100%;
   margin-top: 1em;
 }
-
+.fC{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .button-container button {
   min-height: 50px;
   min-width: 200px;
@@ -87,15 +81,16 @@ html {
   text-transform: uppercase;
   outline: none;
   overflow: visible;
+  will-change:auto;
   background-color: rgba(0, 0, 0, 0.822);
-  transition: background-color var(--animation-nav);
+  transition:var(--animationSmooth);
 }
-.flexCenter{
+.flexCenter {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
-button{
+button {
   cursor: pointer;
 }
 .button-bg {
@@ -116,6 +111,7 @@ button{
   background-color: pink;
   top: 0;
   left: 0;
+  will-change: auto;
   transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 .button-bg:hover {
@@ -131,8 +127,13 @@ a {
   position: relative;
 }
 
-.svg {
-  height: 100px;
+.pillowsvg{
+  width: 40px;
+  height: 40px;
+}
+.logosvg {
+  height: 40px;
+  width: 40px;
 }
 li {
   list-style: none;
@@ -152,6 +153,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
   text-align: center;
   font-style: normal;
 }
@@ -177,7 +180,6 @@ img {
 }
 /* nav */
 
-
 .hero-headtext,
 .headtext-small {
   line-height: 1.095;
@@ -193,15 +195,10 @@ section {
   min-height: 70vh;
 }
 
-
-
 .tal {
   text-align: left;
 }
 
-.border-line{
-  border-bottom: 1px solid silver;
-}
 @media (prefers-color-scheme: light) {
 }
 
@@ -211,12 +208,10 @@ section {
 /* src/index.css */
 
 @media only screen and (max-width: 650px) {
-
-
   p {
     font-weight: 500;
   }
-  
+
   .show-mobile {
     display: block;
   }
@@ -224,6 +219,4 @@ section {
     min-width: none !important;
     width: auto;
   }
-
-  
 }
